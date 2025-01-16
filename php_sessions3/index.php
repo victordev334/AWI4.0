@@ -8,6 +8,7 @@ $_SESSION["pass"] = "1234";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($_POST['user'] === $_SESSION["user"] && $_POST['pass'] === $_SESSION["pass"]) {
         $_SESSION["valido"] = true;
+        $_SESSION["status"] = activo;
         header("Location: bienvenido.php");
         exit();
     } else {
